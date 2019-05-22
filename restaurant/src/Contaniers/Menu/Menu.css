@@ -1,0 +1,86 @@
+
+
+
+  .Menu{
+    display: flex;
+   align-items:flex-start;
+   display: contents;
+  }
+  .Menu h2{
+    display: flex;
+    /* position: relative;
+    top:40px; */
+    color: #210542f8; 
+    align-items: flex-start;
+   justify-content: flex-start; 
+  }
+   .Menu legend{
+     display: flex;
+     align-items: flex-start;
+     justify-content: flex-start;
+    font-size: 30px;
+    font-family: monospace;
+    font-weight: bold;
+    border-block-color: #210542f8;
+    color:#210542f8;
+   
+    
+    
+  }
+  
+  .Menu button{
+    display: flex;
+      width:130px;
+    font-size:20px;
+      height:35px;
+    color:rgb(254,251,200);
+    background:rgb(83, 12, 12);
+    margin:30px;
+    border: 5px #210542f8;
+   /* position: relative;
+   top:50px; */
+   align-items: flex-end;
+   justify-content: center;
+    }
+    
+  .Menu input{
+      font-size: 18px;
+      color:rgb(83, 12, 12);
+      /* position: relative;
+      top:-100px; */
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  
+  .billImg{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+      top:-200px;
+    margin-left: 300px;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .Menu button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .Menu button:focus {
+    background:#3e8e41; ;
+    font-size: 25px;
+     box-shadow: 0px 0px 5px #3b3434;
+     
+  }
+
+  .Menu p{
+    color:rgb(83, 12, 12);
+    font-size: 18px;
+    font-family: monospace;
+    justify-content: flex-start;
+    position: relative;
+    left:-250px;
+    top:-140px;
+  }

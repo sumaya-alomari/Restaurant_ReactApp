@@ -1,0 +1,108 @@
+
+  /* .MenuList-container{
+    display: flex;
+  } */
+  .MenuList a {
+    
+    line-height: 1;
+    font-family:monospace;
+    font-size: 40px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+   
+  }
+  .MenuList {
+    border-radius: 1px;
+    width: auto;
+    background: rgb(254,251,200);
+    /* display:flex;
+    justify-content:center;
+    align-items: center; */
+   
+    
+  }
+  .MenuList ul {
+   
+    background: rgb(254,251,200);
+    border-radius: 1px;
+   
+    display:flex;
+    justify-content: flex-end;
+    
+  }
+
+    /* .MenuList ul:after {
+    content: '';
+  
+  } */
+  .MenuList ol {
+    /* float: left; */
+    /* border: 1px solid transparent; */
+    margin: 20px;  
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-flow: row;
+    
+    
+  
+  }
+  .MenuList ol a {
+     display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    color: rgb(219, 104, 51) ;
+   
+    font-size: 25px;
+    flex-wrap: wrap;
+    flex-flow: row;
+    
+  
+    
+  }
+  .MenuList ol.active {
+    border-radius: 1px;
+    border:  #ffffff;
+    
+  }
+  .MenuList ol.active a {
+   
+    border-radius: 1px;
+    /* display: flex; */
+    background: #ffffff;
+    border:  #ffffff;
+    box-shadow: inset 0 5px 10px #ffffff;
+  }
+  .MenuList ol:hover {
+  
+    border-radius: 5px;
+    border: #e7e57bf8;
+  }
+  .MenuList ol:hover a {
+   
+    border-radius: 5px;
+    background: #d0dba8;
+    border:  #e7e57bf8;
+    box-shadow: inset 0 1px 1px #e7e57bf8;
+  }
+  
+  .MenuList img {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      
+      flex-flow: row;
+      /* justify-content: flex-start;
+      align-items: flex-start; */
+      
+  }
+  .headerImg{
+   display: flex;
+    height: 200px;
+    /* position: relative;
+    top:-40px; */
+   /* justify-content: flex-start;
+   align-items: flex-start; */
+    
+  }
