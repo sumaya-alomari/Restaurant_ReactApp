@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import './Menu.css';
-//import {Route,Link} from 'react-router-dom';
 import List from '../../Components/List/List';
+import Bill from '../../Components/Bill/Bill';
 
 
 class Menu extends Component {
@@ -64,7 +64,8 @@ class Menu extends Component {
   handleSelect = (id) => {
     //remove the checked item
     console.log('id:', id);
-
+     this.setState({selected:true});
+    
     const currentData = [...this.state.Menu]
     const obj = currentData.splice(id, 1);
     console.log('[app.js]currentData: ', currentData);
@@ -104,19 +105,24 @@ class Menu extends Component {
               
                   <List
                       Menu={this.state.Menu}
-                      //selected={this.state.selected}
+                      selected={this.state.selected}
                       handleselect={this.handleSelect}
                   />
              
           </div>
      
 
-          <div >
+          <div>
             <fieldset>
               <legend >BILL</legend>
+              <div>
+              <Bill
+              checkedArray= {this.state.checkedArray}
+              />
+              </div>
               <h2 >Total Price</h2>
               <input  type="number" value={this.state.Sum} readOnly></input>
-              <button  id="b1" onClick={this.postMyNewData}>Accept</button>
+              <button   className="button1" id="b1" onClick={this.postMyNewData}>Accept</button>
               
               <img className="billImg" src={require('../../Contaniers/MenuList/b1.png')}></img>
               <p>*Our prices includes all taxes and fees</p>

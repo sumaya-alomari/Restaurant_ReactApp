@@ -1,7 +1,7 @@
 import React  from 'react'
 import './List.css';
 import Item from '../Item/Item';
-import {withRouter} from 'react-router-dom'
+
 
 
   
@@ -17,7 +17,7 @@ const List=(props)=>{
               name={item.itemDesc}
               image={item.itemImage} 
               price={item.itemPrice} 
-             // selected={props.selected} 
+              selected={props.selected}
               handleselect={()=>props.handleselect(index)}
               /> )
             })

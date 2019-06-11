@@ -21,6 +21,15 @@ const Input = (props) => {
                 value={props.value}
                 onChange={props.changed} />
             break;
+            // case('img'):
+            // inputElement = <img
+            // className={inputClasses.join(' ')}
+            // {...props.elementConfig}
+            // value={props.value}
+            // onChange={props.changed}
+            // alt="" />
+            // break;
+            
         default:
             inputElement = <input
                 className={classes.InputElement}

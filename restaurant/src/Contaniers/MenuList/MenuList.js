@@ -56,6 +56,7 @@ class Menulist extends Component {
                     </ul>
                 </div>
                 </nav>
+               
                 
                     <Switch>
               <Route path="/Menu"  component={Menu}/>
@@ -63,8 +64,11 @@ class Menulist extends Component {
               <Route path="/contact"  exact component={Contact}/> 
 
                    </Switch>
+                   
 
             </div>
+           
+           
         );
 
        

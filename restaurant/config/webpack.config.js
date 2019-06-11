@@ -43,6 +43,17 @@ const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+};
+
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = function(webpackEnv) {
@@ -400,8 +411,9 @@ module.exports = function(webpackEnv) {
               exclude: cssModuleRegex,
               use: getStyleLoaders({
                 importLoaders: 1,
-                module:true,
-                localIdentName:'[name]__[local]__[hash:base64:5]'
+                sourceMap: isEnvProduction && shouldUseSourceMap
+               // module:true,
+               // localIdentName:'[name]__[local]__[hash:base64:5]'
               }),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.

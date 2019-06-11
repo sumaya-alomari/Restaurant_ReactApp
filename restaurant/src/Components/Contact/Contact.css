@@ -1,58 +1,62 @@
 
+@media screen and (min-width: 415px){
+  .Contact {
+    flex-direction: row;
+  }
+}
 
-
- body {
- padding: 50px 100px;
- font-size: 16px;
- font-style: Verdana, Tahoma, sans-serif;
+body {
+padding: 50px 100px;
+font-size: 16px;
+font-style: Verdana, Tahoma, sans-serif;
 }
 
 img{
-    width: 300px;
-    height: 100px;
+  width: 300px;
+  height: 100px;
 }
 
- h2 {
- margin-bottom: 20px;
- color: #474E69;
- font-size: 30px;
- font-family: monospace;
+h1 {
+margin-bottom: 20px;
+color: #210542f8;
+font-size: 50px;
+font-family: 'Courier New', Courier, monospace;
 }
 
 
- input, textarea {
- padding: 10px;
- border: 1px solid #E5E5E5;
- width: 200px;
- color: #999999;
- box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
- -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
- -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;  
+input, textarea {
+padding: 10px;
+border: 1px solid #E5E5E5;
+width: 200px;
+color: #999999;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;  
 }
 
- textarea {
- width: 400px;
- height: 150px;
- max-width: 400px;
- line-height: 18px;
+textarea {
+width: 400px;
+height: 150px;
+max-width: 400px;
+line-height: 18px;
 }
 
 input:hover, textarea:hover,
 input:focus, textarea:focus {
- border-color: 1px solid rgb(48, 49, 87);
- box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
- -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
- -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px; 
+border-color: 1px solid rgb(48, 49, 87);
+box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+-moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px; 
 }
 
 
 
- .submit input  {
- width: 150px; 
- height: 40px;
- background-color: rgb(51, 113, 150); 
- color: #FFF;
- border-radius: 3px;
- -moz-border-radius: 3px;
- -webkit-border-radius: 3px;  
+.submit input  {
+width: 150px; 
+height: 40px;
+background-color: #efeaf3f8; 
+color: #210542f8;
+border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;  
 }

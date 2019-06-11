@@ -3,41 +3,50 @@ import './Item.css';
 
 
 
-const Item=(props)=>{
-      
-  
-  
+const Item = (props) => {
+
+  //if image in API eual null, will display another image
+  let img;
+
  
-      return (
-       
+  if (props.image === "null") {
+    img = require('./item.jpg');
+  }
+  else {
+    img = props.image;
+  }
 
-        <div>
-
-        <div ></div>
-
-            <div className="plans" >
-
-            <div className="plan" >
-
-                <div className="name">{props.name}</div>
-
-                <div className="price">{props.price}</div>
-             
   
-           <div><img  src= {require('./item.jpg')}></img></div>
-             
-{/* 
-   <div><img  src={props.image}  onerror="this.src = {require('./item.jpg')};"></img></div> */}
-                    {/* <div><img scr={props.image}></img></div>  */}
-    
-                   <div><button onClick={props.handleselect}>ADD</button></div>
-                
-                  
-            </div>
-            </div>
+  return (
 
-            </div>
-      );
-    }
-  
-  export default Item;
+
+    <div>
+
+     
+
+      <div className="plans" >
+
+        <div className="plan" >
+
+          <div className="name">{props.name}</div>
+
+          <div className="price">{props.price}</div>
+
+
+          <div><img src={img} alt=""></img></div>
+
+          <div><button onClick={props.handleselect}>ADD</button></div>
+         {/* <div><a href="javascript:void(null);"  onClick={props.handleselect}>ADD</a></div> */}
+
+
+        </div>
+      </div>
+
+    </div>
+  );
+
+
+}
+
+
+export default Item;

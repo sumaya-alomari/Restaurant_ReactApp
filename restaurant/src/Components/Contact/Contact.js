@@ -9,8 +9,9 @@ class Contact extends Component {
         return (
 
             <div>
-                {/* <h2>Contact US</h2> */}
-                <img src={require('./c3.png')}></img>
+                
+                {/* <img src={require('./c3.png')}></img> */}
+                <h1>CONTACT US</h1>
                 <form className="form">
                    
                        

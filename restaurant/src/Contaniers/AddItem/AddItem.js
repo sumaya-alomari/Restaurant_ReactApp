@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import classes from './AddItem.css'
+import  './AddItem.css'
 import Axios from 'axios'
  import Input from '../../UI/Input/Input'
 import Button from '../../UI/Button/Button'
@@ -50,39 +50,37 @@ class AddItem extends Component {
                 valid:false,
                 touched:false
             },
-            // itemImage:{
-            //     elementType:'img',
-            //     elementConfig:{
-            //         placeholder:'food image'
-            //     },
-            //     value:false,
-            //     touched:false
-            // }
+            itemImage:{
+                elementType:'input',
+                elementConfig:{
+                    placeholder:'Food url image'
+                },
+                value: '',
+                validation: {
+                    required: true
+                },
+                valid:false,
+                touched:false
+            }
            
 
         },
         Admin:false
     }
 
-       
 
 
-    submitForm = () => {
-        console.log('Submit Data');
-    }
-
-
-    inputChangedHandler = (event, inputIdentifier) => {
+    inputChangedHandler = (event, id) => {
         const ItemInformation = {
             ...this.state.itemForm
         };
         const updatedFormElement = {
-            ...ItemInformation[inputIdentifier]
+            ...ItemInformation[id]
         };
         updatedFormElement.value = event.target.value;
         updatedFormElement.valid=this.checkValidity(updatedFormElement.value,updatedFormElement.validation)
         updatedFormElement.touched=true;
-        ItemInformation[inputIdentifier] = updatedFormElement;
+        ItemInformation[id] = updatedFormElement;
  
         
         let formIsValid=true;
@@ -97,8 +95,10 @@ class AddItem extends Component {
 
 
     itemHandler = (event) => {
+        //to cancle refresh event
         event.preventDefault();
         const formData = {};
+        //get value of item
         for (let formElementIdentifier in this.state.itemForm) {
             formData[formElementIdentifier] = this.state.itemForm[formElementIdentifier].value;
         }
@@ -107,9 +107,10 @@ class AddItem extends Component {
 
         }
         console.log(itemInfo)
+       //Data as Json object
        const itemJson = JSON.stringify(itemInfo);
        console.log(itemJson);
-        
+        //post data
         Axios.post('http://94.127.209.194:3333/AudioGramServices/webapi/myresource/postmenu',itemJson)
         .then(response=>{
             this.setState({loading:false})
@@ -135,16 +136,16 @@ class AddItem extends Component {
         console.log(isValid)
         return isValid;
     }
-      
+      //Password admin (12345)
     checkpassword(event){
-        if(event.target.value=="12345")
+        if(event.target.value==="12345")
         {
          this.setState({Admin:true});
         }
     }
     
     render() {
-        const password="12345";
+       
         const formArrayElement = [];
         for (let key in this.state.itemForm) {
             formArrayElement.push({
@@ -167,7 +168,7 @@ class AddItem extends Component {
                         changed={(event) => this.inputChangedHandler(event, formElement.id)} />
 
                 ))}
-                 <div>
+                  <div>
             <input type="text" placeholder="Admin Password" onChange={(event)=>this.checkpassword(event)}></input>
                  </div>
                 <Button  btnType="Success" disabled={!this.state.formIsValid&&!this.state.Admin}>Submit</Button>
@@ -176,7 +177,7 @@ class AddItem extends Component {
         );
 
         return (
-            <div className={classes.ItemInformation}>
+            <div className="AddItem">
                 <h2 className="header">Please Enter Item Information </h2>
                 {form}
             </div>
